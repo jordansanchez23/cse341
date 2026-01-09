@@ -1,0 +1,12 @@
+{
+  "name": "project_contacts",
+  "version": "1.0.0",
+  "description": "This project will provide an API for storing and retrieving information about contacts. These contacts will be stored in a MongoDB database and all interaction will happen through the API created.",
+  "license": "ISC",
+  "author": "Jordan Sanchez",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
