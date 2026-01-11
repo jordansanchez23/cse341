@@ -1,8 +1,16 @@
 /* ***********************
  * Require Statements
  *************************/
-const express = require('express')
-const app = express ()
+const express = require('express');
+const mongoDb = require('./data/database');
+const app = express ();
+
+
+/* ***********************
+ * Local Server Information
+ *************************/
+port = process.env.PORT || 3000;
+
 
 /* ***********************
  * Middleware
@@ -10,13 +18,18 @@ const app = express ()
 app.use('/', require('./routes'));
 
 /* ***********************
- * Local Server Information
+ * Log statement to confirm Database & server operation
  *************************/
-port = process.env.PORT || 3000
+mongoDb.initDb((err) => {
+    if(err) {
+        console.log(err);
+    }
+    else {
+        app.listen(port, () => {
+    console.log(`Database is listening and node Running on port ${port}`)
+        });
+    }
+});
 
-/* ***********************
- * Log statement to confirm server operation
- *************************/
-app.listen(port, () => {
-    console.log(`Running on port ${port}`)
-} )
+
+
