@@ -1,2 +1,14 @@
 ### Test server
 GET http://localhost:3000/
+
+### Test server Array
+GET http://localhost:3000/contacts
+
+### Test server objectId 1
+GET http://localhost:3000/contacts/6962d83551bd27558b58ca8e
+
+### Test server objectId 2
+GET http://localhost:3000/contacts/6962d92251bd27558b58ca8f
+
+### Test server objectId 3
+GET http://localhost:3000/contacts/6962d95051bd27558b58ca90
