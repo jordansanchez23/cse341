@@ -12,3 +12,31 @@ GET http://localhost:3000/contacts/6962d92251bd27558b58ca8f
 
 ### Test server objectId 3
 GET http://localhost:3000/contacts/6962d95051bd27558b58ca90
+
+### Test server CREATE
+POST http://localhost:3000/contacts
+Content-Type: application/json
+
+{
+    "firstName": "Pepe",
+    "lastName": "Gutierrez",
+    "email": "pepe.gutierrez@test.com",
+    "favoriteColor": "Yellow",
+    "birthday": "10/10/1980"
+  }
+
+
+### Test server UPDATE
+PUT http://localhost:3000/contacts/696dbb183561bb3b284dbc53
+Content-Type: application/json
+
+{
+    "firstName": "Pepe",
+    "lastName": "Gutierrez",
+    "email": "pepe.gutierrez@test.com",
+    "favoriteColor": "Brown",
+    "birthday": "10/10/1980"
+  }
+
+### Test server DELETE
+DELETE http://localhost:3000/contacts/696dbb183561bb3b284dbc53

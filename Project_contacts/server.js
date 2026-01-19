@@ -15,8 +15,9 @@ port = process.env.PORT || 3000;
 /* ***********************
  * Middleware
  *************************/
-app.use('/', require('./routes'));
 app.use(bodyParser.json());
+app.use('/', require('./routes'));
+
 
 /* ***********************
  * Log statement to confirm Database & server operation
