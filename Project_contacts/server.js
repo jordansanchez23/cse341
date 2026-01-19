@@ -5,8 +5,6 @@ const express = require('express');
 const mongoDb = require('./data/database');
 const bodyParser = require('body-parser');
 const app = express ();
-const parser = require();
-
 
 /* ***********************
  * Local Server Information
