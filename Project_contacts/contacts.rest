@@ -18,11 +18,11 @@ POST http://localhost:3000/contacts
 Content-Type: application/json
 
 {
-    "firstName": "Pepe",
-    "lastName": "Gutierrez",
-    "email": "pepe.gutierrez@test.com",
-    "favoriteColor": "Yellow",
-    "birthday": "10/10/1980"
+    "firstName": "Mario",
+    "lastName": "Ramirez",
+    "email": "Mario.Ramirez@test.com",
+    "favoriteColor": "Green",
+    "birthday": "11/11/1999"
   }
 
 
@@ -31,11 +31,11 @@ PUT http://localhost:3000/contacts/696dbb183561bb3b284dbc53
 Content-Type: application/json
 
 {
-    "firstName": "Pepe",
-    "lastName": "Gutierrez",
-    "email": "pepe.gutierrez@test.com",
-    "favoriteColor": "Brown",
-    "birthday": "10/10/1980"
+    "firstName": "Nuvia",
+    "lastName": "Keith",
+    "email": "Nuvia.Keith@test.com",
+    "favoriteColor": "Red",
+    "birthday": "12/12/1985"
   }
 
 ### Test server DELETE
