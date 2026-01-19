@@ -18,7 +18,14 @@ const getSingle = async (req, res) => {
     });
 }
 
+const createUser = asyinc (req, res) => {
+    const userId = 
+}
+
 module.exports = {
     getAll,
-    getSingle
+    getSingle,
+    createContact,
+    updateContact,
+    deleteContact
 }

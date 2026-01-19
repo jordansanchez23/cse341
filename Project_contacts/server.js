@@ -3,7 +3,9 @@
  *************************/
 const express = require('express');
 const mongoDb = require('./data/database');
+const bodyParser = require('body-parser');
 const app = express ();
+const parser = require();
 
 
 /* ***********************
@@ -16,6 +18,7 @@ port = process.env.PORT || 3000;
  * Middleware
  *************************/
 app.use('/', require('./routes'));
+app.use(bodyParser.json());
 
 /* ***********************
  * Log statement to confirm Database & server operation
