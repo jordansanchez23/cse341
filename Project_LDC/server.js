@@ -16,6 +16,18 @@ port = process.env.PORT = 5500;
  * Middleware
  *************************/
 app.use(bodyParser.json());
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader(
+        'Access-Control-Allow-Headers',
+        'Origin, X-Requested-width, Content-Type, Accept, Z-Key'
+    );
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    next();
+});
+
+app.use('/', require('./routes'));
+
 
 /* ***********************
  * Log statement to confirm Database & server operation

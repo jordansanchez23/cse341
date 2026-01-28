@@ -1,0 +1,38 @@
+### Test server
+GET http://localhost:5500/
+
+### Test server Array
+GET http://localhost:5500/methods
+
+### Test server objectId 1
+GET http://localhost:5500/methods/6979894fa5b71fd87654794c
+
+### Test server CREATE
+POST http://localhost:5500/methods
+Content-Type: application/json
+
+{
+    "methodCode": "8260D",
+    "methodName": "Volatile Organic Compounds by GC/M",
+    "department": "Organics",
+    "matrix": "Water",
+    "active": false
+
+  }
+
+
+### Test server UPDATE
+PUT http://localhost:5500/methods/6979894fa5b71fd87654794c
+Content-Type: application/json
+
+{
+    "methodCode": "301.0",
+    "methodName": "Chloride by Ion Chromatography",
+    "department": "Inorganics",
+    "matrix": "Sediment",
+    "active": true
+
+  }
+
+### Test server DELETE
+DELETE http://localhost:5500/methods/6979894fa5b71fd87654794c
