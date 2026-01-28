@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const utilities = require('../utilities/jobsValidation');
 
 const jobsController = require('../controllers/jobs');
 
@@ -10,9 +11,15 @@ router.get('/', jobsController.getAllJobs);
 
 router.get('/:id', jobsController.getSingleJob);
 
-router.post('/', jobsController.createJob);
+router.post('/', 
+    utilities.jobRules(),
+    utilities.checkJobsErrors,
+    jobsController.createJob);
 
-router.put('/:id', jobsController.updateJob);
+router.put('/:id', 
+    utilities.jobRules(),
+    utilities.checkJobsErrors,
+    jobsController.updateJob);
 
 router.delete('/:id', jobsController.deleteJob);
 

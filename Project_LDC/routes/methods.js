@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const utilities = require('../utilities/methodsValidation');
 
 const methodsController = require('../controllers/methods');
 
@@ -9,9 +10,15 @@ router.get('/', methodsController.getAllMethods);
 
 router.get('/:id', methodsController.getSingleMethod);
 
-router.post('/', methodsController.createMethod);
+router.post('/', 
+    utilities.methodRules(),
+    utilities.checkMethodErrors,
+    methodsController.createMethod);
 
-router.put('/:id', methodsController.updateMethod);
+router.put('/:id', 
+    utilities.methodRules(),
+    utilities.checkMethodErrors,
+    methodsController.updateMethod);
 
 router.delete('/:id', methodsController.deleteMethod);
 

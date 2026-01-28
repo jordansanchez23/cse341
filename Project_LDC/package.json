@@ -2,8 +2,11 @@
   "dependencies": {
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
+    "express-validator": "^7.3.1",
     "mongodb": "^7.0.0",
-    "parser": "^0.1.4"
+    "parser": "^0.1.4",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1"
   },
   "name": "project_ldc",
   "version": "1.0.0",
